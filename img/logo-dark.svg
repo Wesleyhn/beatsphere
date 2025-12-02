@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 220.82 220.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="32.34" y1="32.34" x2="188.48" y2="188.48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="1" stop-color="#3f3a66"/>
+    </linearGradient>
+  </defs>
+  <g id="Logos">
+    <g id="Variação_4" data-name="Variação 4">
+      <g id="Logo">
+        <circle class="cls-1" cx="110.41" cy="110.41" r="110.41"/>
+        <g id="Beats">
+          <rect class="cls-2" x="50.79" y="104.8" width="6.73" height="10.79" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="62.78" y="97.09" width="6.73" height="26.11" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="74.76" y="81.65" width="6.73" height="56.48" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="86.75" y="102.18" width="6.73" height="15.75" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="97.95" y="92.22" width="6.73" height="35.17" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="109.57" y="69.97" width="6.73" height="80.26" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="121.19" y="92.22" width="6.73" height="35.96" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="132.81" y="102.18" width="6.73" height="15.75" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="144.43" y="81.65" width="6.73" height="56.48" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="156.67" y="97.09" width="6.73" height="26.11" rx="3.37" ry="3.37"/>
+          <rect class="cls-2" x="168.49" y="104.57" width="6.73" height="11.08" rx="3.37" ry="3.37"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
