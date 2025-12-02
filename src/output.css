@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-cyan-200: oklch(91.7% 0.08 205.041);
-    --color-cyan-950: oklch(30.2% 0.056 229.695);
     --color-indigo-400: oklch(67.3% 0.182 276.935);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
@@ -34,8 +32,6 @@
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --tracking-tight: -0.025em;
@@ -44,6 +40,7 @@
     --blur-3xl: 64px;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --animate-slide-in: slideIn 0.4s ease-in-out forwards;
   }
 }
 @layer base {
@@ -322,6 +319,9 @@
   .transform-gpu {
     transform: translateZ(0) var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .animate-slide-in {
+    animation: var(--animate-slide-in);
+  }
   .items-center {
     align-items: center;
   }
@@ -437,10 +437,6 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-  .text-9xl {
-    font-size: var(--text-9xl);
-    line-height: var(--tw-leading, var(--text-9xl--line-height));
-  }
   .text-base\/7 {
     font-size: var(--text-base);
     line-height: calc(var(--spacing) * 7);
@@ -475,9 +471,6 @@
   .text-pretty {
     text-wrap: pretty;
   }
-  .text-cyan-200 {
-    color: var(--color-cyan-200);
-  }
   .text-gray-500 {
     color: var(--color-gray-500);
   }
@@ -495,6 +488,9 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .opacity-0 {
+    opacity: 0%;
   }
   .opacity-30 {
     opacity: 30%;
@@ -516,6 +512,21 @@
   .blur-3xl {
     --tw-blur: blur(var(--blur-3xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .animate-1 {
+    animation-delay: 100ms;
+  }
+  .animate-4 {
+    animation-delay: 400ms;
+  }
+  .animate-6 {
+    animation-delay: 600ms;
+  }
+  .animate-8 {
+    animation-delay: 800ms;
+  }
+  .animate-10 {
+    animation-delay: 1000ms;
   }
   .not-dark\:hidden {
     @media not (prefers-color-scheme: dark) {
@@ -697,11 +708,6 @@
           border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
         }
       }
-    }
-  }
-  .dark\:bg-cyan-950 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-cyan-950);
     }
   }
   .dark\:bg-gray-900 {
@@ -995,6 +1001,16 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
